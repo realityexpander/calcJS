@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Calculator001</title>
+  <link href="img/favicon.png" rel="icon">
+  <meta name=" " content="width-device-width, initial-scale=1">
+  <meta name="Developer" content="YER 2003">
+  <style type="text/css">
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #calculator {
+      padding: 0px;
+      float: center;
+      width: 100%;
+    }
+
+    #panel {
+      padding: 14px;
+      width: 100%;
+      height: 40%;
+      font-size: 64px;
+      border: solid #FFFFFF 0px;
+      color: #666666;
+    }
+
+    .button-layout {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      background-color: #DCDCDC;
+    }
+
+    #calculator-button {
+      margin: 8px;
+      padding: 14px;
+      font-size: 36px;
+      width: 20%;
+      background-color: transparent;
+      border: solid #CACACA 0px;
+      color: #3F3F3F;
+    }
+
+    #calculator-button:hover {
+      background-color: #9D9D9D;
+      offset: 0px;
+      border-radius: 12px;
+    }
+
+    #calculator-button001 {
+      padding: 14px;
+      font-size: 50px;
+      background-color: #6DE91E;
+      border: solid #FFFFFF 0px;
+      width: 100%;
+      color: #FEFEFE;
+    }
+
+    #calculator-button001:hover {
+      background-color: #57BA18;
+    }
+  </style>
+  <script type="text/javascript">
+    /* We set the clear value. */
+    function onClear() {
+      calculator.display.value = "";
+    }
+    /* We set the decimal value. */
+    function onPoint() {
+      calculator.display.value += ".";
+    }
+    /* We set the plus value. */
+    function onPlus() {
+      calculator.display.value += "+";
+    }
+    /* We set the minus value. */
+    function onMinus() {
+      calculator.display.value += "-";
+    }
+    /* We set the multiply value.*/
+    function onTimes() {
+      calculator.display.value += "*";
+    }
+    /* We set the divide value. */
+    function onDivide() {
+      calculator.display.value += "/";
+    }
+    /* We set the equal value */
+    function onResult() {
+      calculator.display.value = eval(calculator.display.value);
+    }
+    /* We set the value of the number of 0 */
+    function onZero() {
+      calculator.display.value += "0";
+    }
+    /* We set the value of the number of 1 */
+    function onOne() {
+      calculator.display.value += "1";
+    }
+    /* We set the value of the number of 2 */
+    function onTwo() {
+      calculator.display.value += "2";
+    }
+    /* We set the value of the number of 3 */
+    function onThree() {
+      calculator.display.value += "3";
+    }
+    /* We set the value of the number of 4 */
+    function onFour() {
+      calculator.display.value += "4";
+    }
+    /* We set the value of the number of 5 */
+    function onFive() {
+      calculator.display.value += "5";
+    }
+    /* We set the value of the number of 6 */
+    function onSix() {
+      calculator.display.value += "6";
+    }
+    /* We set the value of the number of 7 */
+    function onSeven() {
+      calculator.display.value += "7";
+    }
+    /* We set the value of the number of 8 */
+    function onEight() {
+      calculator.display.value += "8";
+    }
+    /* We set the value of the number of 9 */
+    function onNine() {
+      calculator.display.value += "9";
+    }
+  </script>
+</head>
+
+<body>
+  <div class="main-layout">
+    <form name="calculator" id="calculator">
+      <!-- The value appears here when you click the button. -->
+      <input type="text" name="display" id="panel" readonly="true">
+      <br>
+      <div class="button-layout">
+        <!-- We make thr button of the calculator. -->
+        <input type="button" id="calculator-button" value="C" onclick="onClear()">
+        <input type="button" id="calculator-button" value="0" onclick="onZero()">
+        <input type="button" id="calculator-button" value="." onclick="onPoint()">
+        <input type="button" id="calculator-button" value="+" onclick="onPlus()">
+        <br>
+        <input type="button" id="calculator-button" value="1" onclick="onOne()">
+        <input type="button" id="calculator-button" value="2" onclick="onTwo()">
+        <input type="button" id="calculator-button" value="3" onclick="onThree()">
+        <input type="button" id="calculator-button" value="-" class="operator" onclick="onMinus()">
+        <br>
+        <input type="button" id="calculator-button" value="4" onclick="onFour()">
+        <input type="button" id="calculator-button" value="5" onclick="onFive()">
+        <input type="button" id="calculator-button" value="6" onclick="onSix()">
+        <input type="button" id="calculator-button" value="*" class="operator" onclick="onTimes()">
+        <br>
+        <input type="button" id="calculator-button" value="7" onclick="onSeven()">
+        <input type="button" id="calculator-button" value="8" onclick="onEight()">
+        <input type="button" id="calculator-button" value="9" onclick="onNine()">
+        <input type="button" id="calculator-button" value="/" class="operator" onclick="onDivide()">
+        <br>
+        <input type="button" id="calculator-button001" value="=" onclick="onResult()">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
