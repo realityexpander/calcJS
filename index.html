@@ -29,6 +29,8 @@
     .button-layout {
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
       background-color: #DCDCDC;
     }
 
@@ -52,14 +54,23 @@
       padding: 14px;
       font-size: 50px;
       background-color: #6DE91E;
-      border: solid #FFFFFF 0px;
+      border: solid #FFFFFF 3px;
       width: 100%;
       color: #FEFEFE;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
     }
 
     #calculator-button001:hover {
       background-color: #57BA18;
     }
+
+    #calculator-button.operator {
+      background-color:darkgrey;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+    
   </style>
   <script type="text/javascript">
     /* We set the clear value. */
@@ -141,10 +152,10 @@
       <br>
       <div class="button-layout">
         <!-- We make thr button of the calculator. -->
-        <input type="button" id="calculator-button" value="C" onclick="onClear()">
+        <input type="button" id="calculator-button" value="C" class="operator" onclick="onClear()">
         <input type="button" id="calculator-button" value="0" onclick="onZero()">
         <input type="button" id="calculator-button" value="." onclick="onPoint()">
-        <input type="button" id="calculator-button" value="+" onclick="onPlus()">
+        <input type="button" id="calculator-button" value="+" class="operator" onclick="onPlus()">
         <br>
         <input type="button" id="calculator-button" value="1" onclick="onOne()">
         <input type="button" id="calculator-button" value="2" onclick="onTwo()">
